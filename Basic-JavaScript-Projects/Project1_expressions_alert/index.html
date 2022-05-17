@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Project 1 Expressions Alert</title>
+        <meta charset="utf-8">
+        <script src="JavaScript_File.js"></script>
+        <script src="JS/main.js"></script>
+    </head>
+
+    <body>
+        <!-- JavaScript HTML Event Start-->
+        <h3>JavaScript HTML Events</h3>
+        <p>On mouse-over the button, the date and time will be displayed.</p>
+
+        <button onmouseover="displayDate()">The date and time are?</button>
+
+        <script>
+        function displayDate() {
+                document.getElementById("demo").innerHTML = Date();
+        }
+        </script>
+        
+        <p id="demo"></p>
+        <!-- JavaScript HTML Event End -->
+
+    </body>
+    
+    <footer>
+
+    </footer>
+
+</html>
