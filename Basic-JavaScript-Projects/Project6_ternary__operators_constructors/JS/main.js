@@ -30,7 +30,17 @@ function myFunction() {
 }
 // New Keyword Assignment, Object Contructor Function end
 
-
 //Assign a variable the value of a reserved word and attempt to display in the browser
 var password = password;
-document.write(password); 
+document.write(password);
+
+// Write a nested function
+function multiply_Function() {
+    document.getElementById("Nested_Function").innerHTML = Multiply ();
+    function Multiply () {
+        var Starting_point = 3;
+        function Multiply_two() {Starting_point *= 2;}
+        Multiply_two();
+        return Starting_point;
+    }
+}
