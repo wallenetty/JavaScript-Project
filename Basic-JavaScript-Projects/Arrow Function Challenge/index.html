@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Arrow Function Challenge</title>
+        <meta charset="utf-8">
+        <script type="text/javascript" src=""></script>
+    </head>
+
+    <body>
+        <p id="arrow"></p>
+
+        <!-- Write and inline JavaScript function -->
+        <script>
+            var example;
+            example = function(){
+                return "Example of inline JavaScript function!";
+            }
+            document.getElementById("arrow").innerHTML = example();
+        </script>
+
+        <!-- Rewrite your function as an arrow function -->
+        <script>
+            var example;
+            example = () => {
+                return "Example of an arrow function!";
+            }
+            document.getElementById("arrow").innerHTML = example();
+        </script>
+
+    </body>
+</html>
