@@ -14,11 +14,11 @@ function placeXOrO(squareNumber) {
         // This condition checks who's turn it is.
         if (activePlayer === 'X') {
             // If activePlayer is equal to 'X', the x.png is placed in HTML.
-            select.style.backgroundImage = 'url("images/tictactoe_x.png")';
+            select.style.backgroundImage = 'url("images/updated_x.png")';
             // Active player may only be 'X' or 'O' so, if not 'X' it must be 'O'
         } else {
             // If activePlayer is equal to 'O', the o.png is placed in HTML.
-            select.stylebackgroundImage = 'url("images/tictactoe_o.png")';
+            select.style.backgroundImage = 'url("images/updated_o.png")';
         }
         // squareNumber and activePlayer are concatenated together and added to array.
         selectedSquares.push(squareNumber + activePlayer);
@@ -35,7 +35,7 @@ function placeXOrO(squareNumber) {
         }
 
         // This function plays placement sound.
-        audio('./media/place.mp3');
+        audio('./media/updatedPlace.mp3');
         // This condition checks to see if it is computers turn.
         if(activePlayer === 'O'){
             // This function disables clicking for computer choice.
@@ -106,7 +106,7 @@ function checkWinConditions() {
     // squares are selected the code executes.
     else if (selectedSquares.length >= 9) {
         // This function plays the tie game sound.
-        audio('./media/tie.mp3');
+        audio('./media/updatedTie.mp3');
         // This function sets a 0.3 second timer before the resetGame is called.
         setTimeout(function () { resetGame(); }, 1000);
     }
@@ -210,7 +210,7 @@ function drawWinLine(coordX1, coordY1, coordX2, coordY2) {
     // This line disallows clicking while the win sound is playing
     disableClick();
     // This line plays the win sounds.
-    audio('./media/winGame.mp3');
+    audio('./media/updatedWin.mp3');
     // This line calls our main animation loop.
     animateLineDrawing();
     // This line waits 1 second. Then, clears canvas, resets game, and allows clicking again.
