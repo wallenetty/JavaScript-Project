@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- Write out the basic HTML template -->
+        <title>Elements Challenge</title>
+        <meta charset="utf-8">
+    </head>
+
+    <body>
+        <!-- Utilize one of the element properties/methods covered in HTML DOM Document Objects -->
+        <h2>The Document Object</h2>
+        <h3>Trying Out the hasFocus() Method</h3>
+
+        <p>Click INSIDE this document to get focus.<br>
+        Click OUTSIDE this document to lose focus.</p>
+
+        <p id="focus"></p>
+
+        <script>
+            setInterval("myFunction()", 1);
+
+            function myFunction() {
+                let text;
+                if (document.hasFocus()) {
+                    text = "The document has focus."; // The hasFocus() method returns a true IF the document (or any element in the document) has focus.
+                } else {
+                    text = "The document does NOT have focus."; // Otherwise the hasFocus() method returns a false
+                }
+                document.getElementById("focus").innerHTML = text;
+            }
+        </script>
+
+    </body>
+</html>
