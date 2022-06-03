@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Basic AJAX Demo</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+
+        <div class="main">
+            <h2>Get The Latest Content:</h2>
+            <div class='content' id="content">
+                <input type="button" class="button" value="Get Content" id="btn_content" onclick="getContent();"/>
+            </div>
+        <script type="text/javascript">
+            
+            // Step 1: Setup the XML http request object [XMLHttpRequest();]
+            // Instruction on how to setup and call from the Ajax class object
+            var ajax = new XMLHttpRequest();
+        
+            // Step 2: Prepare the open ajax request [Call on the AJAX Open();]
+            // Method on how the browser should handle the data, sending and receiving
+            ajax.open('GET', 'content.html');
+        
+            // Step 3: Define the ajax response callback method [Define the AJAX Callback]
+            // Callback function once we receive the data
+            // The onreadystatechange function is called every time the readyState changes
+            ajax.onreadystatechange = function() {
+                if (ajax.readyState == 4) {
+                    document.getElementById('content').innerHTML = ajax.responseText;
+                }
+            }
+        
+            // Step 4: Send the ajax request for data [Call on the AJAX Send();]
+            // Define a trigger or event that the DOM will be watching for to initiate our send, onclick event
+            function getContent() {
+                ajax.send();
+                document.getElementById('btn_content').style.display = 'none';
+            }
+        </script>
+
+        <!-- Define and learn how to use the onreadystatechange Property -->
+        <!-- The onreadystatechange property defines a function to be executed when the readyState changes-->
+        <div id="demo">
+            <h1>The XMLHttpRequest Object</h1>
+            <button type="button" onclick="loadDoc()">Change Content</button>
+        </div>
+
+        <script>
+            function loadDoc() {
+                var xhttp = new XMLHttpRequest();
+                /* The onreadystate change function is called every time the readyState changes */
+                xhttp.onreadystatechange = function() {
+                    /* When readyState is 4 and status is 200, the response is ready */
+                    if (this.readyState == 4 && this.status == 200) {
+                        document.getElementById("demo").innerHTML = this.responseText;
+                    }
+                };
+                xhttp.open('Get', 'ajax_info.txt', true);
+                xhttp.send();
+            }
+        </script>
+        
+    </body>
+</html>
