@@ -1,0 +1,45 @@
+<!DOCtype html>
+<html lang="en">
+    <head>
+        <title>jQuery</title>
+        <meta charset="UTF-8">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script> <!-- Address of where the jQuery is stored -->
+    </head>
+
+   
+    <script> // jQuery() is how you target a DOM object and is replaced by $()
+    $(document).ready(function() { // what we are going to do with the DOM object once ready, perform a function
+        $("html").append ( // Once the document is loaded, we used jQuery to target the html element and will append the following code
+            "<body>\
+                <div id='container'>\
+                    <div id='inner'>\
+                        <h1>Basic jQuery</h1>\
+                        <p id='1'>Paragraph 1</p>\
+                        <p id='2'>Paragraph 2</p>\
+                        <p id='3'>Paragraph 3</p>\
+                        <p id='4'>Paragraph 4</p>\
+                        <p id='5'>Paragraph 5</p>\
+                    </div>\
+                </div>\
+            </body>"
+        );
+        $("#2").css({"color":"red"}); // Affect the <p id='2'> element with CSS [#=id], "property": "attribute", change the font color to red
+        $("#1").click(function() { // When someone clicks on paragraph 1,
+            $('h1').hide(); // the <h1> element will disappear
+        });
+    }); // End of the .ready Function
+
+    // Write and successfully execute one of the jQuery events listed on the jQuery Event Basics page
+    $(document).ready(function() {
+        $("#4").on({
+        "mouseover": function() {document.write("You hovered over Paragraph 4!");} // When someone hovers over Paragraph 4, a message will appear on the screen
+        });
+    });
+
+    // Write and successfully execute one of the jQuery effects listed on the jQuery Introduction to Effects page
+    $(document).ready(function() {
+        $("#5").hide("slow"); // Hides paragraph 5 slowly
+    });
+
+    </script>
+</html>
