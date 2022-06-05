@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>React File Assignment</title>
+        <meta charset="utf-8">
+        <script src="react.js"></script>
+        <script src="react-dom.js"></script>
+    </head>
+
+    <body>
+        <div id="My_React_Code"></div>
+        <script>
+            // Using the following React code, we created a timer that counts upward
+            var Counter = React.createClass({ // React.createClass creates component classes
+                render: function() {
+                    var time_Passed = Math.round(this.props.time_Passed / 100);
+                    var seconds_Passed = time_Passed / 10 + (time_Passed % 10 ? '' : '.0' ); // ? - a conditional operator that checks for whether or not a condition is true
+                    var text = 'MyReact code started running ' + seconds_Passed + ' seconds ago!'; // the : following it is shorthand for "else"
+                    return React.DOM.p(null, text); // % finds the remainder
+                }
+            });
+
+            var counter_Factory = React.createFactory(Counter); // React.createFactory is a function that generates a factory (object that can create other objects)
+
+            var start_Counting = new Date().getTime();
+            setInterval(function() { // setInterval() is a method that evaluates an expression at specified intervals (milliseconds)
+                ReactDOM.render( // ReactDOM.render() used to render a React component(s)
+                    counter_Factory({time_Passed: new Date().getTime() - start_Counting}),
+                    document.getElementById('My_React_Code')
+                );
+            }, 50);
+        </script>
+        
+    </body>
+
+</html>
