@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+    <body>
+        <p id="XML_Example"></p>
+        <script>
+            var XML_Parsing, XML_Documentation;
+
+            // Create a text string
+            var Vehicle  = "<vehicle>" + "<make>Hyundai</make>" + "<model>Santa Fe</model>" + "<mileage>61,000</mileage>" + "<year>2012</year>" + "</vehicle>";
+
+            // Create an XML DOM parser
+            XML_Parsing = new DOMParser();
+
+            // Create a new XML DOM object using the text string
+            XML_Documentation = XML_Parsing.parseFromString(Vehicle,"text/xml");
+
+            // Use the getElementsByTagName() method to display the text within an XML tag of your choosing
+            document.getElementById("XML_Example").innerHTML = XML_Documentation.getElementsByTagName("year")[0].childNodes[0].nodeValue;
+
+        </script>
+    </body>
+</html>
