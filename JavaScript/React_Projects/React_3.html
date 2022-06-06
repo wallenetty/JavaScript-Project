@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>JSX Assignment</title>
+        <meta charset="utf-8">
+        <!-- Use the <script> tag and src attribute to link to the React libraries and JSX library via URL -->
+        <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
+        <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
+        <!-- This link references Babel (a JS compiler that ensures that our code is compatible with browsers and allows for the use of JSX) -->
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    </head>
+
+    <body>
+        <!-- Specify a place in our HTML code to render the statement -->
+        <div id='JSX'></div>
+
+        <script type="text/babel">
+            // class specifies a class
+            // React.Component is used to specify a class or function
+            class Greeting extends React.Component {
+                // this "render() is used to create a function in React
+                render() {
+                    // this "return" statement returns information
+                    return <h1>Looks like this work!</h1>
+                }
+            }
+
+            ReactDOM.render(<Greeting />, document.getElementById('JSX'))
+        </script>
+    </body>
+</html>
