@@ -4,7 +4,30 @@
         <title>Pizza Drill Demo</title>
         <!-- This is the "long" notation for the typical <meta charset="utf-8"> element -->
         <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
-        <meta content="width=device-width,initial-scale=1.0" name="viewport">
+
+        <!-- VW Unit Challenge 6/6/22 Start -->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+            div.example {
+                background-color: #f08080;
+                padding: 20px;
+                text-align: center;
+                width: 100%;
+            }
+            @media screen and (min-width: 601px) {
+                div.example {
+                    font-size: 80px;
+                }
+            }
+
+            @media screen and (max-width: 600px) {
+                div.example {
+                    font-size: 30px;
+                }
+            }
+        </style>
+        <!-- VW Unit Challenge 6/6/22 End -->
+
         <script src="./Pizza_JavaScript/Pizza.js" defer></script>
         <link rel="stylesheet" type="text/css" href="./Pizza_CSS/Pizza.css" />
     </head>
@@ -14,6 +37,11 @@
             <h1 style="margin:0 0px 0 20px">Pizza Drill Tutorial</h1> <!-- Assign a color to all <h1> elements -->
             <input id="btnOrder" type="button" onclick="getReceipt()"
                 value="Place Order">
+
+            <!-- VW Unit Challenge 6/6/22 Start -->
+            <div class="example">Creating a Responsive Text</div>
+            <!-- UV Unit Challenge 6/6/22 End-->
+
             <form id="frmMenu">
                 <!-- This container is on the left side of page -->
                 <div class="menu left">

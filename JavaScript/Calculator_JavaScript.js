@@ -127,3 +127,9 @@ keys.addEventListener('click', (event) => {
     Input_Digit(target.value);
     Update_Display();
 })
+
+// Fade Challenge: Create an effect that makes it so the elements fade in as the page loads 6/6/22, JavaScript portion start
+window.addEventListener('DOMContentLoaded', () => {
+    document.body.classList.remove('fade-out');
+})
+// Fade Challenge: Create an effect that makes it so the elements fade in as the page loads 6/6/22, JavaScript portion end
