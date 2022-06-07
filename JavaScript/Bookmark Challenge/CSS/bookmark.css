@@ -1,0 +1,19 @@
+/* Bookmark Challenge, Ensure there is a smooth scrolling when taken down the page to the various links */
+html {
+    scroll-behavior: smooth;
+}
+
+#section1 {
+    height: 600px;
+    background-color: pink;
+}
+
+#section2 {
+    height: 600px;
+    background-color: palegoldenrod;
+}
+
+#section3 {
+    height: 600px;
+    background-color: paleturquoise;
+}
