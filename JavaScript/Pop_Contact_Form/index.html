@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- Create a popup contact form -->
+        <title>Pop Contact Form</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <link rel="stylesheet" href="./CSS/Pop_Contact_Form.css">
+    </head>
+
+    <body>
+        <!-- Create a popup form, HTML component: Use a <form> element to process the input -->
+        <h2>Example of a Popup Contact Form</h2>
+        <p>Click on the button at the bottom of this page to open the sign-in form.</p>
+        <p>Note: the button and the form is fixed at the bottom of the browser window.</p>
+
+        <button class="open-button" onclick="openForm()">Click to Open Form</button>
+
+        <div class="form-popup" id="myForm">
+            <form action="/action_page.php" class="form-container">
+                <h1>Sign-in</h1>
+
+                <label for="username"><b>Username or email address:</b></label>
+                <input type="text" placeholder="Enter Username or Email..." name="username" required>
+
+                <label for="psw"><b>Password</b></label>
+                <input type="password" placeholder="Enter password" name="psw" required>
+
+                <button type="submit" class="btn">Submit</button>
+                <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+            </form>
+        </div>
+        
+        <script src="./JS/Pop_Contact_Form.js"></script>
+    </body>
+</html>
