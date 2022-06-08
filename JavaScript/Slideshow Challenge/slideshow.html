@@ -5,6 +5,19 @@
         <title>Slideshow Challenge</title>
         <meta charset="utf-8">
         <link rel="stylesheet" href="./CSS/Slideshow.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script>
+        $("#slideshow > div:gt(0)").hide();
+
+        setInterval(function() {
+            $('#slideshow > div:first')
+            .fadeOut(1000)
+            .next()
+            .fadeIn(1000)
+            .end()
+            .appendTo('#slideshow');
+        }, 3000);
+        </script>
     </head>
 
     <body>
@@ -22,9 +35,7 @@
                 <img src="./Images/Sloth_mug.jpg">
             </div>
         </div>
-
-        <script src="./slideshow.js"></script>
-
+        
     </body>
 </html>
     
