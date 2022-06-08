@@ -1,0 +1,49 @@
+/* Add an element at the bottom of your page, Anchors the footer information to the bottom of the page */
+footer {
+    bottom: 0;
+    height: 100px;
+    left: 0;
+    position: absolute;
+    width: 100%;
+    border: 1px solid black;
+}
+
+html {
+    font-family: "Avenir Next", Helvetica, sans-serif;
+    text-align: center;
+}
+
+body {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+input {
+    padding-top: 30px;
+    width: 500px;
+    height: 60px;
+    font-size: 40px;
+    border: 0;
+    text-align: center; /* Using CSS, center the UI element that presents your todo entry point and task list */
+}
+
+input:focus {
+    outine: none;
+}
+
+li {
+    text-align: left;
+    font-size: 40px;
+    list-style: none;
+    margin: 0;
+    text-align: center; /* Using CSS, center the UI element that presents your todo entry point and task list */
+}
+
+/* Using CSS, make the element that contains your footer information have a border and stick the footer to the bottom of the page */
+div.sticky {
+    position: -webkit-sticky;
+    position: sticky;
+    bottom: 40px;
+    padding: 50px;
+    font-size: 16px;
+}

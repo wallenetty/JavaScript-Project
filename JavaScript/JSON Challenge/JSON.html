@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>JSON JavaScript Object Notation</title>
+        <meta charset="utf-8">
+    </head>
+
+    <body>
+        <!-- Write and successfully execute the JSON.stringify() method in the browser -->
+        <p id="Jeannette"></p>
+
+        <script>
+            /* Storing data, JavaScript dictionary object */
+            var person = {"name":"Jeannette", "age":52, "birthplace":"Minneapolis"};
+            /* JavaScript object converted into JSON string format */
+            var JSONexample = JSON.stringify(person);
+            /* Retrieving data */
+            document.getElementById("Jeannette").innerHTML = JSONexample;
+        </script>
+
+        <hr>
+
+        <!-- Write and successfully execute the JSON.parse() method in the browser -->
+        <p id="Car"></p>
+
+        <script>
+            /* Parse a string (written in JSON format) */
+            var vehicle = JSON.parse('{"make":"Hyundai", "model":"Santa Fe", "year":2012}');
+            /* Returns a JavaScript oject */
+            document.getElementById("Car").innerHTML = "I own a " + vehicle.make + " " + vehicle.model + " that was manufactured in " + vehicle.year + ".";
+        </script>
+        
+    </body>
+</html>
