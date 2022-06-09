@@ -27,9 +27,9 @@ input {
     text-align: center; /* Using CSS, center the UI element that presents your todo entry point and task list */
 }
 
-input:focus {
-    outine: none;
-}
+    input:focus {
+        outline: none;
+    }
 
 li {
     text-align: left;
@@ -46,4 +46,9 @@ div.sticky {
     bottom: 40px;
     padding: 50px;
     font-size: 16px;
+}
+
+/* This adds padding between items in the array after one has been deleted */
+.remove {
+    padding-bottom: 5px;
 }

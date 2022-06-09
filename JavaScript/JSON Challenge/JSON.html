@@ -29,6 +29,18 @@
             /* Returns a JavaScript oject */
             document.getElementById("Car").innerHTML = "I own a " + vehicle.make + " " + vehicle.model + " that was manufactured in " + vehicle.year + ".";
         </script>
+
+        <hr>
+
+        <!-- Write and successfully execute the localStorage() method in the browser -->
+        <p id="store"></p>
+
+        <script>
+            // Set item
+            localStorage.setItem("cat", "Pacchi Hime");
+            // Retrieve
+            document.getElementById("store").innerHTML = localStorage.getItem("cat");
+        </script>
         
     </body>
 </html>
