@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- OnDblClick Event Handler Challenge, create a basic HTML webpage -->
+        <title>OnDblClick Event Handler Challenge</title>
+        <meta charset="utf-8">
+    </head>
+
+    <body>
+        <!-- OnDblClick Event Handler Challenge, ensure it includes at least one paragraph element and add the OnDblClick event handler to the paragraph element -->
+        <p id="event" ondblclick="myFunction()">Double-click this paragraph to see what occurs.<br>Different effects can be called on, when the paragraph is double-clicked.<br>Some examples are: another message can appear or<br>the styling of the paragraph can change.</p>
+
+        <script>
+            // Add the script element and a function to be called when the paragraph is double clicked
+            function myFunction() {
+                document.getElementById("event").innerHTML = "This is the desired effect when the paragraph is double-clicked.";
+            }
+        </script>
+        
+    </body>
+</html>
