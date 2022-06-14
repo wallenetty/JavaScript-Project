@@ -1,10 +1,8 @@
 # JavaScript-Project
-<hr>
  
  These are some of the projects that I made using JavaScript.
 
 ## Projects
-<hr>
 
 - Pizza Ordering Menu
 - Tic-Tac-Toe Game
