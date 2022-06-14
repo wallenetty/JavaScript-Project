@@ -4,11 +4,16 @@
 
 ## Projects
 
+- Portfolio Website
 - Pizza Ordering Menu
 - Tic-Tac-Toe Game
 - Calculator App
 
-Project descriptions:
+### Project descriptions:
+
+### Portfolio Website
+
+This project created a live website highlighting my journey through coding bootcamp. The site took various HTML and CSS elements and added JavaScript to give the website more functionality and versatility. The project features an interactive slideshow and contact form.
 
 ### Pizza Ordering Menu
 
